@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 16.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Áudio&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>} <span class="Apple-converted-space">   </span></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.audio-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: space-between;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Open Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: flex-start;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer; /* Adicione o cursor pointer para indicar que é clicável */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.audio-container img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>object-fit: cover;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-right: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.audio-container .microphone-icon {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: -67px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: -25px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #4ad954;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.audio-container .microphone-icon.blue {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #3db8ee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__control.plyr__tab-focus,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__control:hover,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__control[aria-expanded=false] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(0, 0, 0, 0);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--plyr-audio-control-background-hover, var(--plyr-color-main, var(--plyr-color-main, rgba(0, 0, 0, 0))));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: rgba(0, 0, 0, 0);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--plyr-audio-control-color-hover, #797979)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__controls {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(0, 0, 0, 0);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--plyr-audio-controls-background, rgba(0, 0, 0, 0));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: inherit;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #4a5464;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--plyr-audio-control-color,#4a5464);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 0px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__control--overlaid .plyr__control__icon {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 33px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--full-ui input[type=range]::-webkit-slider-thumb {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-webkit-appearance: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 1px 1px rgba(35,40,47,.15),0 0 0 1px rgba(35,40,47,.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: var(--plyr-range-thumb-shadow,0 1px 1px rgba(35,40,47,.15),0 0 0 1px rgba(35,40,47,.2));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: var(--plyr-range-thumb-height,13px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: -4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: calc(var(--plyr-range-thumb-height,13px)/2*-1 - var(--plyr-range-track-height,5px)/2*-1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-webkit-transition: all .2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all .2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: var(--plyr-range-thumb-height,13px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--range-thumb-background, #4ad954);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>} <span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--full-ui input[type=range].blue::-webkit-slider-thumb {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--range-thumb-background-active, #3db8ee);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hide {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr__controls .plyr__controls__item.plyr__progress__container:first-child,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr__controls .plyr__controls__item.plyr__time+.plyr__time,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr__controls .plyr__controls__item.plyr__time:first-child {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 7.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr__time+.plyr__time:before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>content: "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-right: var(--plyr-control-spacing);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Ocultar os controles de tempo */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__controls .plyr__controls__item.plyr__time--current.hide,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.plyr--audio .plyr__controls .plyr__controls__item.plyr__time--duration.hide {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="audio-container" id="audioContainer"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Cole o link do Seu áudio Abaixo--&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;audio class="plyr" src="https://s3.fr-par.scw.cloud/typebot/public/typebots/vbmwa3fbo46hl199eu6n1j0b/blocks/c4cfk0ek9btp4roy0f0asv3g?v=1691114559309"&gt;&lt;/audio&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Cole o link da Sua imagem Abaixo--&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;img src="https://i.postimg.cc/dtpkSMwB/foto-doutora-lara-certo.png" alt="Imagem"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="microphone-icon"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;i class="fas fa-microphone"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.plyr.io/3.6.7/plyr.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.addEventListener('DOMContentLoaded', function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const player = new Plyr('.plyr', {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>controls: ['play', 'progress', 'current-time', 'duration']</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const audioElement = document.querySelector('.plyr');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const currentTimeElement = document.querySelector('.plyr__time--current');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const durationElement = document.querySelector('.plyr__time--duration');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const microphoneIcon = document.querySelector('.microphone-icon');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>currentTimeElement.classList.add('hide'); // Adiciona a classe 'hide' ao iniciar</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>audioElement.addEventListener('play', function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>currentTimeElement.classList.remove('hide');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>durationElement.classList.add('hide');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>microphoneIcon.classList.add('blue'); // Adiciona a classe 'blue' para alterar a cor do ícone</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>audioElement.classList.add('blue'); // Adiciona a classe 'blue' para alterar o background do controle deslizante</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>audioElement.style.setProperty('--range-thumb-background', '#3db8ee');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>audioElement.addEventListener('pause', function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>currentTimeElement.classList.add('hide');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>durationElement.classList.remove('hide');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const audioContainer = document.getElementById('audioContainer');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>audioContainer.addEventListener('click', function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const playButton = audioContainer.querySelector('.plyr__controls button[data-plyr="play"]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>playButton.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const playPauseButton = document.getElementById('audioContainer').querySelector('.plyr__controls button[data-plyr="play"]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const audioBox = document.querySelector('.audio-box');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>playPauseButton.addEventListener('click', function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const playButton = audioContainer.querySelector('.plyr__controls button[data-plyr="play"]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>playButton.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>audioBox.addEventListener('click', function(event) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>event.stopPropagation();<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const playButton = audioContainer.querySelector('.plyr__controls button[data-plyr="play"]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>playButton.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
